@@ -29,5 +29,7 @@ const str = await read()
 
 ```bash
 cd Day1
+npm install
+
 npm run execute
 ```
