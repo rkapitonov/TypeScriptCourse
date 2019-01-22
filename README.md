@@ -2,7 +2,7 @@
 
 ## День 1
 
-    - Установить NPM - 
+    - Установить NPM
       - Windows: Переходим по ссылке https://www.npmjs.com/get-npm
       - В терминале: sudo apt install nodejs
     - Установить VS Code - https://code.visualstudio.com/download
@@ -21,8 +21,7 @@
     - Делаем задачу, которая спрашивает имя, а потом выводит «Hello, <имя>». Для этого в /Day/app.ts подготовлен шаблон
     - Коммит результата
     - Пуш результата
-    - Соз
-    - ДЗ: Программа решающая квадратные уравнения
+    - Создать pull request на github, см. кнопку new pull request
 
 ### Домашнее задание
 Написать программу решения [квадратного уравнения](http://reshit.ru/reshit-kvadratnoe-uravnenie-onlain)
