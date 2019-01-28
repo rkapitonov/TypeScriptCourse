@@ -10,42 +10,52 @@ async function main(): Promise<void>
 - и т. д.*/
 
     console.log('введите число:');
-    var x = Number(await read());
+ //   var x = Number(await read());
     enum RUB {rubley = 'рублей', rubl = 'рубль', rublya = 'рубля'};
 
-    if ((x>20) || (x<10))
-{
-    var xx = x%10;
-  
-    switch(xx) {
-        case 0:
-        case 5:
-        case 6:
-        case 7:
-        case 8:
-        case 9: {
-            console.log(x,RUB.rubley);
-            break;
-        }
-        case 1: {
-            console.log(x, RUB.rubl);
-            break;
-        }
-        case 2:
-        case 3:
-        case 4: {
-            console.log(x, RUB.rublya);
-            break;
-        }
 
-    }
+    var rublei : number[] = [0, 5, 6, 7, 8, 9];
+    var rublya : number[] = [2,3,4];
+    var rubl : number[] = [1];
 
-
-}  else {
-         console.log(x, RUB.rubley)
-        }
+    var b = Number(await read());
 
     
+    if (isNaN(b) === false)              //проверка - число это или нет         
+{
+ 
+    var bb = b%10; //остаток от деления на 10
+    var i: number = 0;
+   
+    if ((b>20) || (b<10)) {
+    while (i <= 9) 
+{
+
+    switch (bb) {
+        case rublei[i]: {
+            console.log(b, RUB.rubley);
+            break;
+        }
+        case rublya[i]: {
+            console.log(b, RUB.rublya);
+            break;
+        }
+        case rubl[i]: {
+            console.log(b, RUB.rubl);
+            break;
+        }
+    }
+    i++;
+}
+
+    }
+    else {
+        console.log(b, RUB.rubley);
+       }
+
+
+}  
+else {console.warn('Для ввода доступны только число')};
 
 
 }
