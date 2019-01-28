@@ -5,6 +5,9 @@ async function main(): Promise<void>
     console.log('введите один символ:');
     var x = await read();
 
+    if (x.length > 1) { console.log('Неверное количество символов. Максимум один') } 
+    else { 
+
     if ((x>='a') && (x<='z')) 
     {
         console.log(x, '= латиница')
@@ -17,6 +20,7 @@ async function main(): Promise<void>
     {
         console.log(x, '= ne latinica')
     }
+}
 }
 
 main();

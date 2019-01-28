@@ -16,16 +16,29 @@ async function main(): Promise<void>
     if ((x>20) || (x<10))
 {
     var xx = x%10;
-    
-    if (xx===0) {
-        console.log(x, RUB.rubley);
-    } else if (xx===1) {
-        console.log(x, RUB.rubl);
-    } else if ((xx>1) && (xx<5)) {
-        console.log(x, RUB.rublya);
-    } else if (xx>4) {
-        console.log(x, RUB.rubley)
-    } 
+  
+    switch(xx) {
+        case 0:
+        case 5:
+        case 6:
+        case 7:
+        case 8:
+        case 9: {
+            console.log(x,RUB.rubley);
+            break;
+        }
+        case 1: {
+            console.log(x, RUB.rubl);
+            break;
+        }
+        case 2:
+        case 3:
+        case 4: {
+            console.log(x, RUB.rublya);
+            break;
+        }
+
+    }
 
 
 }  else {
