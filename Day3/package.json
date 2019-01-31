@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.ts",
+  "main": "app3.ts",
   "scripts": {
-    "execute": "ts-node app.ts"
+    "execute": "ts-node app.ts",
+    "app3": "ts-node app3.ts"
   },
   "author": "",
   "license": "ISC",
