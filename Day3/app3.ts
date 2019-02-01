@@ -62,9 +62,13 @@ function generateMassive(sizeMassive:number, countMassive: number): number[] //A
 function arraySum(array): number {
 
     var sum = 0;
-    for(var i = 0; i < array.length; i++){
+    for(var i = 0; i < array.length; i++)
+    {
+        if (isNaN(array[i]) === false) 
+        {
         sum += array[i];
         }
+    }
    // console.log(sum);
         return sum;
 }
