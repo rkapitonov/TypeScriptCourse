@@ -30,16 +30,21 @@ function generateMassive(sizeMassive:number, countMassive: number): number[] //A
     var maxSum = 0;
     var nomerMassiva = 0;
     var massive = new Array(sizeMassive);
-   
+
+    //формирование массивов
     for (var i = 0; i<countMassive; i++) 
     {
-        massive[i] = new Array(countMassive);
+        massive[i] = new Array(i);
         
         for (var j=0; j<sizeMassive; j++) 
         {
-            massive[i][j] = (Math.trunc((Math.random()*200) - 50));
+            
+            massive[i][j] = (Math.trunc((Math.random()*200) - 50)); 
             
         }
+
+
+    //сумма i - го массива    
         var sum = arraySum(massive[i]);
         console.log('Сумма ', i+1, 'массива = ', sum);
 
@@ -52,6 +57,8 @@ function generateMassive(sizeMassive:number, countMassive: number): number[] //A
                     }
  
     }
+ 
+
     console.log(massive);
     console.log('Max Sum = ', maxSum, '. Номер массива = ', nomerMassiva+1, ' ', massive[nomerMassiva]);     
     return massive;
@@ -72,3 +79,5 @@ function arraySum(array): number {
    // console.log(sum);
         return sum;
 }
+
+
