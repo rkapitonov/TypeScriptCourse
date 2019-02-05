@@ -9,33 +9,47 @@ import { read } from "./console";
 Создайте автомобиль.
 */
 
-async function main(): Promise<void>
-{
-    
-}
-
-main();
-
 
 // carWheel - koleso
 // carEngine - dvigatel
 // carBenzobak - benzobak
 
 interface IDrivable {
-    accelerate(): number;
-    brake(): number;
-    turn(): number;
+    accelerate(turn: number): number;
+    brake(wheel: number): number;
+    turn(engine: number): number;
 }
 
-class Car {
-    private carWheel: number;
-    private carEngine: string;
-    private carBenzobak: number;
+class Transport implements IDrivable{
+    private transportWheel: number;
+    private transportEngine: number;
+    private transportBenzobak: number;
 
+    constructor(wheel: number, engine: number, benzobak: number) {
+        this.transportBenzobak = benzobak;
+        this.transportEngine = engine;
+        this.transportWheel = wheel;
+    }
 
+    accelerate(turn: number): number {
+        return turn;
+    }
 
+    brake(wheel: number): number {
+        return wheel;
+    } 
 
+    turn(engine: number): number {
+        return engine;
+    }
 
-
+    
 
 }
+
+async function main(): Promise<void>
+{
+    let Mazda = new Transport(1,2,3);
+    console.log(Mazda);
+}
+main();
